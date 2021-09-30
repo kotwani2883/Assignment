@@ -21,11 +21,27 @@ func AddUserdetails(){
     RollNumber=Int(readLine()!)
     print("Enter atleast 4 subjects out of A,B,C,D,E,F")
     let subjects = readLine()!
-  
+
     let stud=Details(name:fullName,age:Age!,address:Address,roll:RollNumber!,courses:subjects)
     student.append(stud)
     
 
+}
+func  ShowUserDetails(){
+    print("___________________________________________")
+    print("Name  Roll-Number   Age  Address  Courses  ")
+    print("___________________________________________")
+    print("                                           ")
+    for element in student {
+        print(element.name)
+        print(element.age)
+        print(element.address)
+        print(element.roll)
+        print(element.courses)
+    }
+}
+func deleteUserDetails(No:Int,studentArray: [Details])->Int{
+     return studentArray.firstIndex { $0.roll == No }
 }
 repeat{
 print("Student Management System : ")
@@ -39,7 +55,13 @@ print("To exit out of the Program press 5")
    switch option {
 case 1:
    AddUserdetails()
-   case
+case 2:
+  ShowUserDetails()
+case 3:
+    var Number:Int? /*Roll Number is Always unique */
+    Number=Int(readLine()!)
+ deleteUserDetails(No:123,studentArray:[Details])
+ 
 case 5:
    flag=false
 default:
