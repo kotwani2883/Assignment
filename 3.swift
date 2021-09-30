@@ -28,11 +28,18 @@ func AddUserdetails(){
 
 }
 repeat{
+print("Student Management System : ")
+print("To add New User to the data Structure press 1")
+print("To display details of users press 2")
+print("To delete the user press 3")
+print("To save the details of user in phone press 4")
+print("To exit out of the Program press 5")
     var option:Int?
     option = Int(readLine()!)
    switch option {
 case 1:
    AddUserdetails()
+   case
 case 5:
    flag=false
 default:
